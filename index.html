@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Easy Vreco</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <title>Document</title>
 </head>
+
 <body>
-  
-  
+  <div class="container">
+    <div class="row">
+      <button type="button" class="btn btn-warning m-2 align-self-center" id="btn-primay">Encuéntrame</button>
+    </div>
+    <div class="row">
+      <input type="text" placeholder="Origen" class="m-2 border border-warning">
+      <input type="text" placeholder="Destino" class="m-2 border border-warning">
+      <button type="button" class="btn btn-warning col-sm-3 col-4 col-md-2 m-2" id="btn-second">Trazar Ruta</button>
+    </div>
+  </div>
+
+  <!-- Mapa -->
+  <div class="container-fluid">
+    <div class="row">
+      <div id="map" class="col mt-2"></div>
+    </div>
+  </div>
+
+  <script src="app.js "></script>
+
 </body>
 </html>
