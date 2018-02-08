@@ -1,15 +1,19 @@
 // Declaramos las variables
-
-let btnPrimary= document.getElementById('btn-primary');
+let btnPrimary = document.getElementById('btn-primary');
 let origen = document.getElementById('origen');
 let destino = document.getElementById('destino');
 let btnSecond = document.getElementById('btn-second');
-let maps = document.getElementById('map');
+let mapa = document.getElementById('map');
+let placeSearch, autocomplete;
 
+// declarando eventos
+btnPrimary.addEventListener('click', FindMePosition);
 
 function initMap() {
   let directionsService = new google.maps.DirectionsService;
   let directionsDisplay = new google.maps.DirectionsRenderer;
+
+  initAutocomplete();
 
   let laboratoriaLima = {
     lat: -12.1191427,
@@ -25,32 +29,66 @@ function initMap() {
     position: labaratoriaLima,
     map: map,
     animation: google.maps.Animation.DROP,
-
   });
+
+  directionsDisplay.setMap(map);
+  const userChange = () => {
+    userChangeDisplay(directionsService, directionsDisplay);
+  };
+
+  btnSecond.addEventListener('click', userChange);
 }
 
-function buscar(){
-  if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(functionExito, functionError);
-  }
+
+/*
+
+// usando información Json para marcar mapas usando la API de Google Maps.
+let locationsInfo = []
+
+const getLocations = ()=>{
+    fetch('https://www.datos.gov.co/resource/g373-n3yy.json')
+    .then(response => response.json())
+    .then(locations => {
+        console.log(locations)
+
+        locations.forEach(location => {
+            let locationData = {
+                position:{lat:location.punto.coordinates[1],lng:location.punto.coordinates[0]},
+                name:location.nombre_sede                
+            }
+            locationsInfo.push(locationData)
+        })
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition((data)=>{
+                let currentPosition = {
+                    lat: data.coords.latitude,
+                    lng: data.coords.longitude
+                }
+                dibujarMapa(currentPosition)
+            })
+        }
+    })
 }
 
-let latitud, longitud;
-const functionExito = function (posicion){
-  latitud = posicion.coords.latitude;
-  longitud = posicion.coords.longitud;
+const dibujarMapa = (obj) =>{
+   let map = new google.maps.Map(document.getElementById('map'),{
+        zoom:4,
+        center:obj
+    })
+
+    let marker = new google.maps.Marker({
+        position:obj,
+        title:'Tu ubicacion'
+    })
+    marker.setMap(map)
+
+    let markers = locationsInfo.map( (place) =>{
+        return new google.maps.Marker({
+            position: place.position,
+            map:map,
+            title:place.name
+        })
+    })
 }
-
-let miUbicacion = new google.map.Marker({
-  position: {lat: latitud, lng: longitud},
-  map: map
-});
-
-map.setZoom(18);
-map.setCenter({lat: latitud, lng: longitud});
-
-let functionError = function (error){
-  error('Tenemos problemas con encontrar tu ubicación');
-}
-
-document.getElementById("encuentrame").addEventListener("click", buscar);
+window.addEventListener('load',getLocations)
+*/
