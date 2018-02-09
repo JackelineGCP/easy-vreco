@@ -17,25 +17,30 @@
       <button type="button" id="encuentrame" class="btn btn-warning m-2 align-self-center">Encuéntrame</button>
     </div>
     <div class="row">
-      <input type="text" id="origen" placeholder="Origen" class="m-2 border border-warning">
-      <input type="text" id="destino" placeholder="Destino" class="m-2 border border-warning">
-      <button type="button" id="btn-second" class="btn btn-warning col-sm-3 col-4 col-md-2 m-2">Trazar Ruta</button>
+      <input type="text" id="origen" placeholder=" Origin" class="m-2 border border-warning">
+      <input type="text" id="destino" placeholder=" Destination" class="m-2 border border-warning">
+      <button type="button" id="ruta" class="btn btn-warning col-sm-3 col-4 col-md-2 m-2">Trazar Ruta</button>
     </div>
   </div>
 
   <!--  Mapa -->
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div id="map" class="col mt-2"></div>
+      <div class="col-12">
+        <div id="map" class="img-fluid">
+        </div>
+      </div>
     </div>
   </div>
-  
 
   <script src="js/app.js "></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJa_HkyLd1ssSQ3CCkHRjhQ4vicbm73ec&callback=initMap">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJa_HkyLd1ssSQ3CCkHRjhQ4vicbm73ec&libraries=places&callback=initMap">
   </script>
 
 </body>
