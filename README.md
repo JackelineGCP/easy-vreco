@@ -10,12 +10,16 @@ Para este proyecto usamos la API con el plan estándar, para ello debemos obtene
 Ubicación inicial o de referencia 
 ![Sin titulo](assets/images/miraflores.png)
 
-Mi ubicación actual
-![Sin titulo](assets/images/mydirection.png)
-
 Trazando la ruta de un punto inicial hasta el punto de destino
 ![Sin titulo](assets/images/trazandoRuta.png)
 
+### Vista responsive
+Vista Horizontal
+![Sin titulo](assets/images/horizontal.png)
+
+Vista Vertical
+
+![Sin titulo](assets/images/vertical.png)
 
 
 ### Tecnologia utilizada:
