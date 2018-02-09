@@ -6,6 +6,18 @@ Esta aplicación tendrá la funcionalidad de asignar un primer punto (punto de p
 
 Para este proyecto usamos la API con el plan estándar, para ello debemos obtener una clave de la API configurada en: https://developers.google.com/maps/documentation/javascript/get-api-key
 
+### Pantallazos de nuestro producto
+Ubicación inicial o de referencia 
+![Sin titulo](assets/images/miraflores.png)
+
+Mi ubicación actual
+![Sin titulo](assets/images/mydirection.png)
+
+Trazando la ruta de un punto inicial hasta el punto de destino
+![Sin titulo](assets/images/trazandoRuta.png)
+
+
+
 ### Tecnologia utilizada:
 * Bootstrap v4.0
 * HTLM 5
