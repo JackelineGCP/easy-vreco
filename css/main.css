@@ -1,13 +1,6 @@
 #map {
   border: 1px solid #ffc107;
-  padding: 10px;
   width: 100%;
-  display: inline-block;
-  margin: 50px;
   height: 90vh;
-  /*
-  object-fit: cover;
-  background: red;
-  */
 }
 

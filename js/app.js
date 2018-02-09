@@ -1,3 +1,53 @@
+function initMap() {
+    const LaboratoriaLim = {
+      lat: -12.1191427,
+      lng: -77.0349046
+    };
+    let map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 18,
+      center: LaboratoriaLim
+    });
+    let marker = new google.maps.Marker({
+      position: LaboratoriaLim,
+      map: map
+    });
+  
+    let latitud, longitud, miUbicacion;
+  
+    const funcionError = function (error) {
+      alert('Activa tu ubicación')
+    }
+  
+    const funcionExito = function (posicion) {
+      latitud = posicion.coords.latitude;
+      longitud = posicion.coords.longitude;
+      miUbicacion = new google.maps.Marker({
+        position: {
+          lat: latitud,
+          lng: longitud
+        },
+        map: map
+      })
+      map.setCenter({
+          lat: latitud,
+          lng: longitud
+        }),
+        map.setZoom(18)
+    }
+  
+    const search = function () {
+      //navegación
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
+      }
+    }
+    document.getElementById('encuentrame').addEventListener('click', search);
+  
+  }
+
+
+
+/*
 // Declaramos las variables
 let btnPrimary = document.getElementById('btn-primary');
 let origen = document.getElementById('origen');
@@ -41,6 +91,8 @@ function initMap() {
 
   btnSecond.addEventListener('click', userChange);
 }
+
+*/
 
 
 /*
