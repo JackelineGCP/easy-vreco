@@ -6,6 +6,9 @@ let btnSecond = document.getElementById('btn-second');
 let mapa = document.getElementById('map');
 let placeSearch, autocomplete;
 
+new google.maps.places.Autocomplete('origen');
+new google.maps.places.Autocomplete('destino');
+
 // declarando eventos
 btnPrimary.addEventListener('click', FindMePosition);
 
